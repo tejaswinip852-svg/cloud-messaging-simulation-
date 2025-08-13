@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cloud App 2 - Receiver</title>
+</head>
+<body>
+  <h1>Cloud App 2</h1>
+  <button onclick="receiveMessage()">Check for Messages</button>
+  <p id="output"></p>
+
+  <script>
+    function receiveMessage() {
+      let msg = localStorage.getItem("cloudMessage");
+      document.getElementById("output").innerText = msg || "No messages found";
+    }
+  </script>
+</body>
+</html>
+
